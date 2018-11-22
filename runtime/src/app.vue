@@ -1,13 +1,18 @@
 <template lang="jade">
   .app
+    back
     router-view.app-container(:hashbang="true",:history="true")
 </template>
 <script>
+  import back from "./components/back.vue"
   export default {
     name: "app",
     methods: {
       init(){
       }
+    },
+    components: {
+      back
     },
     mounted(){
       this.init()

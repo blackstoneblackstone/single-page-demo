@@ -22,7 +22,7 @@ function runtime({router, i18n, utils, cookies}) {
         return console.log(`${name}注册路由传入routers 不是Array类型`)
       }
       const routersCopy = []
-      const reg = new RegExp("^\\/" + name + "\\/")
+      const reg = new RegExp("^\\/" + name + "\\/?")
       if (!routerMap[name]) {
         console.log(`${name}模块没有注册`)
       }

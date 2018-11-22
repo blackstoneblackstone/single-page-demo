@@ -1,6 +1,7 @@
 <template lang="jade">
   .con
-    | 首页
+    button(@click="back")
+      | 返回
 
 </template>
 <script>
@@ -12,15 +13,23 @@
     computed: {},
     mounted () {
     },
-    methods: {}
+    methods: {
+      back(){
+        this.$router.go(-1)
+      }
+    }
   }
 </script>
 
 <style lang="stylus" scoped>
   .con
-    display: flex
-    font-size: 60px
-    color: #ffd46f
-    justify-content: center
-    align-items: center
+    position: absolute
+    top: 100px
+    left: 100px
+    z-index: 100
+
+  button
+    font-size: 40px
+
+
 </style>
